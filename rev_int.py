@@ -5,7 +5,7 @@ def rev_int(x):
     x = singed 32 bit int
     '''
     orig_num = x
-    x = str(abs(x)).strip('0')
+    x = str(abs(x)).rstrip('0')
     rev_str = ''
     
     for i in range(len(x)-1,-1,-1):
