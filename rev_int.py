@@ -1,5 +1,7 @@
 def rev_int(x):
     '''
+    Given a 32-bit signed integer, reverse digits of an integer
+    
     x = singed 32 bit int
     '''
     orig_num = x
