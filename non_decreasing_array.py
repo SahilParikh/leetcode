@@ -12,12 +12,12 @@ def non_dec_array(array):
                 counter += 1
         else:
             if counter >= 2:
-                print('False')
+                return('False')
             else:
                 if array[i] > array[i-1]: 
-                    print('True')
+                    return('True')
                 else:
-                    print('False')
+                    return('False')
         i += 1
         
 non_dec_array([4,2,3])
