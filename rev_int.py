@@ -14,7 +14,7 @@ def rev_int(x):
             rev_str = int(rev_str)
             if rev_str / (-1 * rev_str) != orig_num / (-1 * orig_num) :
                 rev_str *= -1
-                print(rev_str)
+     return(rev_str)
 
                 
       
