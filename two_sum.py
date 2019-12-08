@@ -8,7 +8,7 @@ def twosum(numarray, num):
         addend = abs(num-i)
         if addend in numarray:
             index_array.append([numarray.index(i), numarray.index(addend)])
-    print(index_array)
+    return(index_array)
 
 
 twosum([2,7,11,15], 9)
