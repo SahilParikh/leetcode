@@ -1,28 +1,22 @@
-def rev_int(x):
-    '''
-    Given a 32-bit signed integer, reverse digits of an integer
-    
-    x = singed 32 bit int
-    '''
-    orig_num = x
-    x = str(abs(x)).rstrip('0')
-    rev_str = ''
+def rev_int(numb):
+    digit_array = []
 
-    if orig_num != 0:
-        for i in range(len(x)-1,-1,-1):
-            rev_str += x[i]
-            if i == 0:
-                rev_str = int(rev_str)
-                if orig_num < 0:
-                    rev_str *= -1
-    else:
-        rev_str = int(orig_num)
+    for i in str(numb):
+        mag_10 = len(str(numb))
+        divide_numb = 10 ** (mag_10 - 1)
         
-    print(rev_str)
+        digit = numb // divide_numb
+        
+        numb = numb - (int(i) * divide_numb)
+        
+        digit_array.append(str(digit))
 
-                
-      
-rev_int(-120)
-rev_int(123)
-rev_int(156)
-rev_int(0)
+    rev_numb = ''.join(digit_array)[::-1]
+
+    print(int(rev_numb))
+
+    return rev_numb
+
+
+
+rev_int(1234567)
